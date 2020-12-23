@@ -1,17 +1,26 @@
-int[] arr = {800,11,50,771,649,770,240, 9};
+using System;
 
-int temp = 0;
-
-for (int write = 0; write < arr.Length; write++)
+public class Program
 {
-    for (int sort = 0; sort < arr.Length - 1; sort++)
+    public static void Main()
     {
-        if (arr[sort] > arr[sort + 1])
+        int[] arr = {1, 5, 2, 4, 9, 0, 3};
+
+        int temp = 0;
+
+        for (int write = 0; write < arr.Length; write++)
         {
-            temp = arr[sort + 1];
-            arr[sort + 1] = arr[sort];
-            arr[sort] = temp;
-        }       
-    }   
-    Console.Write("{0} ", arr[write]);  
+            for (int sort = 0; sort < arr.Length - 1; sort++)
+            {
+                if (arr[sort] > arr[sort + 1])
+                {
+                    temp = arr[sort + 1];
+                    arr[sort + 1] = arr[sort];
+                    arr[sort] = temp;
+                }
+            }
+            Console.Write("{0} ", arr[write]);
+        }
+
+    }
 }
